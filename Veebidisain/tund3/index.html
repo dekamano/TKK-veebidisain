@@ -3,16 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <title>Title of the document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
 <style>
-    body {
-        background: #0e0e0e;
-        color: #ffffff;
-    }
+   img {
+       width: 350px;
+   } 
 </style>
 </head>
 
 <body>
-Content of the document......
+    <a data-fancybox="gallery" href="grond.png">
+        <img src="grond.png" alt='pilt'>
+    </a>
+    <a data-fancybox="gallery" href="grond.png">
+        <img src="grond.png" alt='pilt'>
+    </a>
+
+
+    <div class="your-class">
+        <div>your content</div>
+        <div>your content</div>
+        <div>your content</div>
+    </div>
+                      
+
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.your-class').slick();
+        });
+              </script>
 </body>
 
 </html>

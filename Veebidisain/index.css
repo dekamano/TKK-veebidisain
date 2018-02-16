@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700');
+
+body {
+    background-color: #3e3e3e;
+    -webkit-font-smoothing: antialiased;
+}
+.nupp {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;  
+    border: 3px solid #f45e5f;
+    border-radius: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    background: transparent;
+    padding: 10px 40px;
+    letter-spacing: .25px;
+    line-height: 20px;
+    -webkit-transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition:         all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.nupp::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: #f45e5f;
+    display: block;
+    transition: height 300ms ease-out;
+}
+
+.nupp:hover:before {
+    height: 100%;
+}
+
+.nupp__frame {
+    display: inline-block;
+    overflow: hidden;   
+    position: relative;
+    vertical-align: middle;
+}
+
+.nupp__frame-inner {
+    display: inline-block;
+}
+
+.nupp:hover .nupp__frame-inner {
+    transform: translateY(0);
+    animation: textMove 300ms forwards; 
+}
+
+.nupp__ikoon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+    margin-left: 8px;
+    vertical-align: middle;
+    top: -1px;
+    position: relative;
+}
+
+@keyframes textMove {
+    0% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    51% {
+        transform: translateY(100%);
+        opacity: 0;
+        color: #fff;
+    }
+    52% {
+        transform: translateY(-100%);
+        color: #000;
+    }
+    53% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        color: #000;
+    }
+}
